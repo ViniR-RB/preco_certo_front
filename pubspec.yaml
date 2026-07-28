@@ -1,0 +1,93 @@
+name: preco_certo
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_modular: ^7.1.0
+  loading_animation_widget: ^1.3.0
+
+  flutter_localizations:
+    sdk: flutter
+
+  intl: any
+  envied: ^1.3.8
+  dio: ^5.11.0
+  cached_network_image: ^3.4.1
+  flutter_secure_storage: ^10.3.1
+  json_annotation: ^4.12.0
+  lucid_validation: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^6.0.0
+  envied_generator: ^1.3.8
+  build_runner: ^2.15.1
+  flutter_gen_runner: ^5.15.0
+  json_serializable: ^6.14.0
+
+# A versão 2.3.0 do path_provider_android introduziu JNI, que ainda aplica o
+# Kotlin Gradle Plugin legado. Mantemos a última versão anterior até o plugin
+# oferecer suporte a Built-in Kotlin.
+dependency_overrides:
+  path_provider_android: 2.2.23
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  generate: true
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/logo.png
+    
+  fonts:
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/avenir/avenir_800.otf
+          weight: 800
+    - family: SF Pro
+      fonts:
+        - asset: assets/fonts/sf-pro/sf_pro_400.otf
+          weight: 400
+        - asset: assets/fonts/sf-pro/sf_pro_600.otf
+          weight: 600
+        - asset: assets/fonts/sf-pro/sf_pro_700.otf
+          weight: 700
+        - asset: assets/fonts/sf-pro/sf_pro_900.otf
+          weight: 800
+
+flutter_gen:
+  output: lib/gen/
+  integrations:
+    image: true
