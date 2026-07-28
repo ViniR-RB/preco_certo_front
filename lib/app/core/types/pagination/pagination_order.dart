@@ -1,0 +1,4 @@
+enum PaginationOrder {
+  asc,
+  desc,
+}
