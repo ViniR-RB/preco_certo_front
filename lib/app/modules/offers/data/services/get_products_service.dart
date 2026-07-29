@@ -3,6 +3,7 @@ import 'package:preco_certo/app/core/extensions/async_result.dart';
 import 'package:preco_certo/app/modules/offers/data/repositories/i_products_repository.dart';
 import 'package:preco_certo/app/modules/offers/models/product.dart';
 import 'package:preco_certo/app/modules/offers/usecase/i_get_products_use_case.dart';
+import 'package:preco_certo/app/modules/offers/models/offers_location.dart';
 
 class GetProductsService implements IGetProductsUseCase {
   GetProductsService(this._productsRepository);
@@ -10,7 +11,7 @@ class GetProductsService implements IGetProductsUseCase {
   final IProductsRepository _productsRepository;
 
   @override
-  AsyncResult<AppException, List<Product>> execute() {
-    return _productsRepository.getProducts();
+  AsyncResult<AppException, List<Product>> execute(OffersLocation location) {
+    return _productsRepository.getProducts(location);
   }
 }

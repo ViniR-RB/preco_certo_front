@@ -103,4 +103,101 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get registerSubmit => 'Create my account';
+
+  @override
+  String get offersEyebrow => 'OFFERS NEAR YOU';
+
+  @override
+  String get offersTitle => 'Shop smarter today.';
+
+  @override
+  String get offersLocationUnset => 'Set your location';
+
+  @override
+  String get offersLocationHint => 'Find the best stores near you';
+
+  @override
+  String get offersSearchHint => 'Search for a product or store';
+
+  @override
+  String get offersListTitle => 'Offers for your list';
+
+  @override
+  String get offersListSubtitle => 'Stores with the best prices in your area.';
+
+  @override
+  String get offersLocationTitle => 'Where are you?';
+
+  @override
+  String get offersLocationSubtitle =>
+      'Use your position or enter an address to see nearby stores.';
+
+  @override
+  String get offersUseDeviceLocation => 'Use device location';
+
+  @override
+  String get offersUseDeviceLocationHint => 'Find nearby stores automatically';
+
+  @override
+  String get offersUseAddress => 'Enter an address';
+
+  @override
+  String get offersUseAddressHint =>
+      'Enter your street, neighborhood or postal code';
+
+  @override
+  String get offersAddressLabel => 'Address to search for stores';
+
+  @override
+  String get offersAddressHint => 'E.g. 1200 Beira Mar Ave.';
+
+  @override
+  String get offersSearchAddress => 'Search addresses';
+
+  @override
+  String get offersAddressResults => 'Select an address';
+
+  @override
+  String get offersRadiusLabel => 'Show stores within';
+
+  @override
+  String get offersRadiusHint => 'You can adjust this radius at any time.';
+
+  @override
+  String get offersLocationRequired => 'Set your location to continue.';
+
+  @override
+  String get offersNoResults => 'There are no offers near you yet.';
+
+  @override
+  String get offersNoSearchResults => 'No offers found.';
+
+  @override
+  String get offersLoadFailure => 'We couldn\'t load the offers.';
+
+  @override
+  String get offersRetry => 'Try again';
+
+  @override
+  String get offersAdd => 'Add to list';
+
+  @override
+  String get offersRemove => 'Remove from list';
+
+  @override
+  String get offersHome => 'Home';
+
+  @override
+  String get offersList => 'List';
+
+  @override
+  String get offersDeviceLocationDenied =>
+      'Location permission was not granted.';
+
+  @override
+  String get offersDeviceLocationUnavailable =>
+      'We couldn\'t get your location. Try entering an address.';
+
+  @override
+  String get offersAddressNotFound => 'No address was found.';
 }

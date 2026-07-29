@@ -63,6 +63,68 @@ mixin MessageTranslator<T extends StatefulWidget> on State<T> {
         return l10n.registerPasswordInvalid;
       case MessageConstants.registerSubmit:
         return l10n.registerSubmit;
+      case MessageConstants.offersEyebrow:
+        return l10n.offersEyebrow;
+      case MessageConstants.offersTitle:
+        return l10n.offersTitle;
+      case MessageConstants.offersLocationUnset:
+        return l10n.offersLocationUnset;
+      case MessageConstants.offersLocationHint:
+        return l10n.offersLocationHint;
+      case MessageConstants.offersSearchHint:
+        return l10n.offersSearchHint;
+      case MessageConstants.offersListTitle:
+        return l10n.offersListTitle;
+      case MessageConstants.offersListSubtitle:
+        return l10n.offersListSubtitle;
+      case MessageConstants.offersLocationTitle:
+        return l10n.offersLocationTitle;
+      case MessageConstants.offersLocationSubtitle:
+        return l10n.offersLocationSubtitle;
+      case MessageConstants.offersUseDeviceLocation:
+        return l10n.offersUseDeviceLocation;
+      case MessageConstants.offersUseDeviceLocationHint:
+        return l10n.offersUseDeviceLocationHint;
+      case MessageConstants.offersUseAddress:
+        return l10n.offersUseAddress;
+      case MessageConstants.offersUseAddressHint:
+        return l10n.offersUseAddressHint;
+      case MessageConstants.offersAddressLabel:
+        return l10n.offersAddressLabel;
+      case MessageConstants.offersAddressHint:
+        return l10n.offersAddressHint;
+      case MessageConstants.offersSearchAddress:
+        return l10n.offersSearchAddress;
+      case MessageConstants.offersAddressResults:
+        return l10n.offersAddressResults;
+      case MessageConstants.offersRadiusLabel:
+        return l10n.offersRadiusLabel;
+      case MessageConstants.offersRadiusHint:
+        return l10n.offersRadiusHint;
+      case MessageConstants.offersLocationRequired:
+        return l10n.offersLocationRequired;
+      case MessageConstants.offersNoResults:
+        return l10n.offersNoResults;
+      case MessageConstants.offersNoSearchResults:
+        return l10n.offersNoSearchResults;
+      case MessageConstants.offersLoadFailure:
+        return l10n.offersLoadFailure;
+      case MessageConstants.offersRetry:
+        return l10n.offersRetry;
+      case MessageConstants.offersAdd:
+        return l10n.offersAdd;
+      case MessageConstants.offersRemove:
+        return l10n.offersRemove;
+      case MessageConstants.offersHome:
+        return l10n.offersHome;
+      case MessageConstants.offersList:
+        return l10n.offersList;
+      case MessageConstants.offersDeviceLocationDenied:
+        return l10n.offersDeviceLocationDenied;
+      case MessageConstants.offersDeviceLocationUnavailable:
+        return l10n.offersDeviceLocationUnavailable;
+      case MessageConstants.offersAddressNotFound:
+        return l10n.offersAddressNotFound;
       default:
         return l10n.unknownError;
     }

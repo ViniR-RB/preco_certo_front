@@ -11,6 +11,18 @@
 - Em regras de erro, trate apenas erros esperados de acordo com a necessidade do negocio; deixe erros inesperados passarem com `rethrow`.
 - Na camada de `ui`, nao use `try/catch` para fluxo normal de erro; consuma o resultado pelos metodos de `Either` (`when`, `flatMap`, etc.).
 
+## Decisoes de UI e navegacao
+
+- Todo estado que precise atualizar a interface deve ficar no `ChangeNotifier` do controller da feature. Paginas e componentes devem apenas observar esse estado com `context.watch<T>()` ou `ListenableBuilder`.
+- A navegacao do app e sempre feita pelo `flutter_modular`. Use os helpers de `BuildContext` do pacote, como `context.navigate`, `context.pushNamed` e `context.pop`; nao use `Navigator` diretamente.
+- A documentacao de `flutter_modular` pode ser consultada pelo MCP `flutter_modular_docs_mcp`. Como referencia externa, consulte tambem https://pub.dev/packages/flutter_modular.
+- Para loading e mensagens de snackbar em paginas, herde `LoaderMessageMixin` (`lib/app/core/extensions/loader_message.dart`) e use seu `notifier` (`showLoader`, `hideLoader` e `showMessage`).
+
+## Testes
+
+- Use `mocktail` para mocks. Organize mocks reutilizaveis em `test/<modulo>/mock/` e constantes/fixtures em `test/<modulo>/constants/`.
+- Testes devem seguir AAA (`ARRANGE`, `ACT`, `ASSERT`) e reutilizar essas estruturas em vez de declarar mocks e valores fixos repetidos.
+
 <!-- rtk-instructions v2 -->
 # RTK (Rust Token Killer) - Token-Optimized Commands
 

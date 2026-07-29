@@ -283,6 +283,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create my account'**
   String get registerSubmit;
+
+  /// No description provided for @offersEyebrow.
+  ///
+  /// In en, this message translates to:
+  /// **'OFFERS NEAR YOU'**
+  String get offersEyebrow;
+
+  /// No description provided for @offersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Shop smarter today.'**
+  String get offersTitle;
+
+  /// No description provided for @offersLocationUnset.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your location'**
+  String get offersLocationUnset;
+
+  /// No description provided for @offersLocationHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find the best stores near you'**
+  String get offersLocationHint;
+
+  /// No description provided for @offersSearchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for a product or store'**
+  String get offersSearchHint;
+
+  /// No description provided for @offersListTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Offers for your list'**
+  String get offersListTitle;
+
+  /// No description provided for @offersListSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Stores with the best prices in your area.'**
+  String get offersListSubtitle;
+
+  /// No description provided for @offersLocationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Where are you?'**
+  String get offersLocationTitle;
+
+  /// No description provided for @offersLocationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your position or enter an address to see nearby stores.'**
+  String get offersLocationSubtitle;
+
+  /// No description provided for @offersUseDeviceLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Use device location'**
+  String get offersUseDeviceLocation;
+
+  /// No description provided for @offersUseDeviceLocationHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Find nearby stores automatically'**
+  String get offersUseDeviceLocationHint;
+
+  /// No description provided for @offersUseAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an address'**
+  String get offersUseAddress;
+
+  /// No description provided for @offersUseAddressHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your street, neighborhood or postal code'**
+  String get offersUseAddressHint;
+
+  /// No description provided for @offersAddressLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Address to search for stores'**
+  String get offersAddressLabel;
+
+  /// No description provided for @offersAddressHint.
+  ///
+  /// In en, this message translates to:
+  /// **'E.g. 1200 Beira Mar Ave.'**
+  String get offersAddressHint;
+
+  /// No description provided for @offersSearchAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Search addresses'**
+  String get offersSearchAddress;
+
+  /// No description provided for @offersAddressResults.
+  ///
+  /// In en, this message translates to:
+  /// **'Select an address'**
+  String get offersAddressResults;
+
+  /// No description provided for @offersRadiusLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Show stores within'**
+  String get offersRadiusLabel;
+
+  /// No description provided for @offersRadiusHint.
+  ///
+  /// In en, this message translates to:
+  /// **'You can adjust this radius at any time.'**
+  String get offersRadiusHint;
+
+  /// No description provided for @offersLocationRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your location to continue.'**
+  String get offersLocationRequired;
+
+  /// No description provided for @offersNoResults.
+  ///
+  /// In en, this message translates to:
+  /// **'There are no offers near you yet.'**
+  String get offersNoResults;
+
+  /// No description provided for @offersNoSearchResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No offers found.'**
+  String get offersNoSearchResults;
+
+  /// No description provided for @offersLoadFailure.
+  ///
+  /// In en, this message translates to:
+  /// **'We couldn\'t load the offers.'**
+  String get offersLoadFailure;
+
+  /// No description provided for @offersRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get offersRetry;
+
+  /// No description provided for @offersAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to list'**
+  String get offersAdd;
+
+  /// No description provided for @offersRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from list'**
+  String get offersRemove;
+
+  /// No description provided for @offersHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get offersHome;
+
+  /// No description provided for @offersList.
+  ///
+  /// In en, this message translates to:
+  /// **'List'**
+  String get offersList;
+
+  /// No description provided for @offersDeviceLocationDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission was not granted.'**
+  String get offersDeviceLocationDenied;
+
+  /// No description provided for @offersDeviceLocationUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'We couldn\'t get your location. Try entering an address.'**
+  String get offersDeviceLocationUnavailable;
+
+  /// No description provided for @offersAddressNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No address was found.'**
+  String get offersAddressNotFound;
 }
 
 class _AppLocalizationsDelegate

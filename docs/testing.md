@@ -10,7 +10,9 @@ Todo teste deve seguir AAA.
 
 - Use `mocktail` para mocks.
 - Crie uma pasta `mock` por modulo quando o modulo precisar de mocks proprios.
+- Crie uma pasta `constants` por modulo para fixtures, chaves e valores fixos reutilizaveis.
 - Prefira mocks proximos do contexto que eles atendem.
+- Nao redeclare mocks ou fixtures em cada arquivo de teste: importe as estruturas reutilizaveis do modulo.
 
 ## Regras praticas
 

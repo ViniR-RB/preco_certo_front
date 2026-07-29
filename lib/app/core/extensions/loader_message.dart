@@ -43,6 +43,7 @@ class LoaderMessageNotifier extends ChangeNotifier {
 mixin LoaderMessageMixin<T extends StatefulWidget> on State<T> {
   late final LoaderMessageNotifier notifier;
   bool _isDialogOpen = false;
+  bool _isDialogShown = false;
 
   @override
   void initState() {
@@ -57,14 +58,25 @@ mixin LoaderMessageMixin<T extends StatefulWidget> on State<T> {
     // Loader
     if (notifier.isLoading && !_isDialogOpen) {
       _isDialogOpen = true;
-      showDialog(
-        context: context,
-        builder: (_) => AppLoadingWidget(),
-        barrierDismissible: false,
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted || !notifier.isLoading || !_isDialogOpen) {
+          _isDialogOpen = false;
+          return;
+        }
+
+        _isDialogShown = true;
+        showDialog(
+          context: context,
+          builder: (_) => AppLoadingWidget(),
+          barrierDismissible: false,
+        ).whenComplete(() {
+          _isDialogOpen = false;
+          _isDialogShown = false;
+        });
+      });
     } else if (!notifier.isLoading && _isDialogOpen) {
       _isDialogOpen = false;
-      context.pop();
+      if (_isDialogShown) context.pop();
     }
 
     if (notifier.message != null && notifier.type != null) {
