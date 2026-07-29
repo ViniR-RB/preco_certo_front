@@ -1,0 +1,13 @@
+targets:
+  $default:
+    sources:
+      - $package$
+      - lib/**
+      - .env
+      - pubspec.yaml
+    builders:
+      json_serializable:
+        options:
+          field_rename: none 
+        generate_for:
+          - lib/app/modules/**/*.dart
