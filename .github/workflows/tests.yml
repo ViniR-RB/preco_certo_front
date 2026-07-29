@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: fvm flutter pub get
 
+      - name: Create test environment
+        run: echo "API_URL=https://example.invalid" > .env
+
       - name: Generate source files
         run: fvm flutter pub run build_runner build
 
