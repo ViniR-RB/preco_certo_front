@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run tests and coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Install FVM
+        run: dart pub global activate fvm
+
+      - name: Install Flutter version from FVM configuration
+        run: fvm install
+
+      - name: Install dependencies
+        run: fvm flutter pub get
+
+      - name: Run all tests with coverage
+        run: fvm flutter test --coverage
+
+      - name: Require at least 70% coverage
+        run: |
+          awk '
+            /^LF:/ { found = 1; total += substr($0, 4) }
+            /^LH:/ { covered += substr($0, 4) }
+            END {
+              if (!found || total == 0) {
+                print "Coverage report is empty."
+                exit 1
+              }
+
+              percentage = (covered / total) * 100
+              printf "Coverage: %.2f%% (%d/%d lines)\\n", percentage, covered, total
+              exit percentage < 70
+            }
+          ' coverage/lcov.info

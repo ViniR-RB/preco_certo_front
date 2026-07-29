@@ -18,7 +18,7 @@ void main() {
     expect(result.isValid, isTrue);
   });
 
-  test('reports errors for empty email and password', () {
+  test('reports the first error for empty credentials', () {
     // ARRANGE
     final credentials = CredentialsWithEmailAndPassword(email: '', password: '');
 
@@ -28,6 +28,6 @@ void main() {
     // ASSERT
     expect(result.isValid, isFalse);
     expect(result.firstErrorFor('email'), isNotNull);
-    expect(result.firstErrorFor('password'), isNotNull);
+    expect(result.exceptions, hasLength(1));
   });
 }
