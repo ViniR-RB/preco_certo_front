@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:preco_certo/app/core/config/constants.dart';
 import 'package:preco_certo/app/core/config/message_constants.dart';
 import 'package:preco_certo/app/core/data/exceptions/local_storage_exception.dart';
 import 'package:preco_certo/app/core/data/local_storage/i_local_storage_service.dart';
@@ -25,7 +24,11 @@ class LocalStorageServiceImpl implements ILocalStorageService {
       return Success(value);
     } catch (e, s) {
       log("Error on get local storage", error: e, stackTrace: s);
-      throw LocalStorageException(MessageConstants.unknownError, e.toString(), s);
+      throw LocalStorageException(
+        MessageConstants.unknownError,
+        e.toString(),
+        s,
+      );
     }
   }
 
@@ -37,7 +40,11 @@ class LocalStorageServiceImpl implements ILocalStorageService {
       return Success(unit);
     } catch (e, s) {
       log("Error on set local storage", error: e, stackTrace: s);
-      throw LocalStorageException(MessageConstants.unknownError, e.toString(), s);
+      throw LocalStorageException(
+        MessageConstants.unknownError,
+        e.toString(),
+        s,
+      );
     }
   }
 
