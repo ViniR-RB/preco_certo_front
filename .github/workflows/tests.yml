@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: fvm flutter pub get
 
+      - name: Generate source files
+        run: fvm flutter pub run build_runner build
+
       - name: Run all tests with coverage
         run: fvm flutter test --coverage
 
